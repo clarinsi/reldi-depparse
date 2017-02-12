@@ -1,0 +1,32 @@
+1	Proces	proces	_	N	_	Ncmsn	_	_	_	_	_	_
+2	privatizacije	privatizacija	_	N	_	Ncfsg	_	_	_	_	_	_
+3	na	na	_	S	_	Sl	_	_	_	_	_	_
+4	Kosovu	Kosovo	_	N	_	Npnsl	_	_	_	_	_	_
+5	pod	pod	_	S	_	Si	_	_	_	_	_	_
+6	lupom	lupa	_	N	_	Ncfsi	_	_	_	_	_	_
+
+1	Kosovo	Kosovo	_	N	_	Npnsn	_	_	_	_	_	_
+2	ozbiljno	ozbiljno	_	R	_	Rgp	_	_	_	_	_	_
+3	analizira	analizirati	_	V	_	Vmr3s	_	_	_	_	_	_
+4	svoje	svoj	_	P	_	Px-mpa	_	_	_	_	_	_
+5	procese	proces	_	N	_	Ncmpa	_	_	_	_	_	_
+6	privatizacije	privatizacija	_	N	_	Ncfsg	_	_	_	_	_	_
+7	u	u	_	S	_	Sl	_	_	_	_	_	_
+8	svetlu	svetlo	_	N	_	Ncnsl	_	_	_	_	_	_
+9	čestih	čest	_	A	_	Agpfpgy	_	_	_	_	_	_
+10	pritužbi	pritužba	_	N	_	Ncfpg	_	_	_	_	_	_
+11	.	.	_	Z	_	Z	_	_	_	_	_	_
+
+1	Bar	bar	_	R	_	Rgp	_	_	_	_	_	_
+2	na	na	_	S	_	Sl	_	_	_	_	_	_
+3	papiru	papir	_	N	_	Ncmsl	_	_	_	_	_	_
+4	,	,	_	Z	_	Z	_	_	_	_	_	_
+5	to	taj	_	P	_	Pd-nsn	_	_	_	_	_	_
+6	izgleda	izgledati	_	V	_	Vmr3s	_	_	_	_	_	_
+7	kao	kao	_	C	_	Cs	_	_	_	_	_	_
+8	odlična	odličan	_	A	_	Agpfsny	_	_	_	_	_	_
+9	ideja	ideja	_	N	_	Ncfsn	_	_	_	_	_	_
+10	.	.	_	Z	_	Z	_	_	_	_	_	_
+
+
+1	Proces	proces	_	N	_	Ncmsn	_	_	_	_	_	_ \\n 2	privatizacije	privatizacija	_	N	_	Ncfsg	_	_	_	_	_	_ \\n 3	na	na	_	S	_	Sl	_	_	_	_	_	_ \\n 4	Kosovu	Kosovo	_	N	_	Npnsl	_	_	_	_	_	_ \\n 5	pod	pod	_	S	_	Si	_	_	_	_	_	_ \\n 6	lupom	lupa	_	N	_	Ncfsi	_	_	_	_	_	_ \\n \\n
