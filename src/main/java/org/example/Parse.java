@@ -26,17 +26,37 @@ import java.io.File;
 
 public class Parse extends HttpServlet
 {
-    private  Parser p = null;
+    private  Parser srParser = null;
+    private  Parser hrParser = null;
+    private  Parser slParser = null;
 
-    private OptionsSuper options = null;
+    private OptionsSuper optionsSr = null;
+    private OptionsSuper optionsHr = null;
+    private OptionsSuper optionsSl = null;
 
     public Parse() {
-        File resourcesDirectory = new File("src/main/resources/set.hr.conll.MODEL");
-        String[] args = new String[]{
-                "-model" ,resourcesDirectory.getAbsolutePath()
+        File resourcesDirectorySr = new File("src/main/resources/set.sr.conll.MODEL");
+        File resourcesDirectorySl = new File("src/main/resources/set.sl.conll.MODEL");
+        File resourcesDirectoryHr = new File("src/main/resources/set.hr.conll.MODEL");
+
+        String[] argsSr = new String[]{
+                "-model" ,resourcesDirectorySr.getAbsolutePath()
         };
-        this.options = new Options(args);
-        this.p = new Parser(options);
+        String[] argsSl = new String[]{
+                "-model" ,resourcesDirectorySl.getAbsolutePath()
+        };
+        String[] argsHr = new String[]{
+                "-model" ,resourcesDirectoryHr.getAbsolutePath()
+        };
+        this.optionsSr = new Options(argsSr);
+        this.optionsSl = new Options(argsSl);
+        this.optionsHr = new Options(argsHr);
+
+
+        this.srParser = new Parser(optionsSr);
+        this.slParser = new Parser(optionsSl);
+        this.hrParser = new Parser(optionsHr);
+
 
     }
 
@@ -44,15 +64,20 @@ public class Parse extends HttpServlet
     {
         long start = System.currentTimeMillis();
 
+        String lang = request.getParameter("lang");
         String input = java.net.URLDecoder.decode(request.getParameter("text"), "UTF-8");
 
         try {
-            StringBuilder str = p.out(options, p.pipe, p.params, false, options.label, input);
+            Parser pr = (lang.equals("Croatian")) ? hrParser : (lang.equals("Slovenian")) ? slParser : srParser;
+            OptionsSuper opt = (lang.equals("Croatian")) ? optionsHr : (lang.equals("Slovenian")) ? optionsSl : optionsSr;
+            StringBuilder str = pr.out(opt, pr.pipe, pr.params, false, opt.label, input);
+
             Decoder.executerService.shutdown();
             Pipe.executerService.shutdown();
 
             response.setContentType("text/html");
             response.setStatus(HttpServletResponse.SC_OK);
+
             response.getWriter().println(str.toString());
         } catch (Exception e) {
             System.out.println(e.getMessage());
