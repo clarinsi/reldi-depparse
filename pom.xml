@@ -52,6 +52,8 @@
                 <version>${jettyVersion}</version>
                 <configuration>
                     <scanIntervalSeconds>5</scanIntervalSeconds>
+                   	<stopPort>9999</stopPort>
+			       	<stopKey>jetty-stop</stopKey>
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
                             <port>9090</port>
