@@ -56,8 +56,6 @@ public class Parse extends HttpServlet
         this.srParser = new Parser(optionsSr);
         this.slParser = new Parser(optionsSl);
         this.hrParser = new Parser(optionsHr);
-
-
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
