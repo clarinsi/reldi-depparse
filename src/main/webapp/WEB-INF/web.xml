@@ -5,18 +5,10 @@
         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
         version="2.5">
     <servlet>
-        <servlet-name>Hello</servlet-name>
-        <servlet-class>org.example.HelloWorld</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>Parse</servlet-name>
         <servlet-class>reldi.api.Parse</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>Hello</servlet-name>
-        <url-pattern>/hello/*</url-pattern>
-    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Parse</servlet-name>
         <url-pattern>/parse/*</url-pattern>
