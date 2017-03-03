@@ -10,7 +10,7 @@
     </servlet>
     <servlet>
         <servlet-name>Parse</servlet-name>
-        <servlet-class>org.example.Parse</servlet-class>
+        <servlet-class>reldi.api.Parse</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
