@@ -64,10 +64,7 @@ public class Parse extends HttpServlet
 
         String lang = request.getParameter("lang");
         String input = java.net.URLDecoder.decode(request.getParameter("text"), "UTF-8");
-
-	System.out.println("Receiving");
-	System.out.println(lang);
-	System.out.println(input);
+        
         try {
             Parser pr = (lang.equals("hr")) ? hrParser : (lang.equals("sl")) ? slParser : srParser;
             OptionsSuper opt = (lang.equals("hr")) ? optionsHr : (lang.equals("sl")) ? optionsSl : optionsSr;
